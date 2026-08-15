@@ -1,0 +1,21 @@
+package com.bharatpass.common.enums;
+
+public enum DocumentType {
+    PHOTO,
+    AADHAAR_EKYC,
+    PAN_CARD,
+    BIRTH_CERTIFICATE,
+    SCHOOL_LEAVING,
+    VOTER_ID,
+    ELECTRICITY_BILL,
+    BANK_STATEMENT,
+    MARRIAGE_CERTIFICATE,
+    AFFIDAVIT,
+    ANNEXURE_A,
+    ANNEXURE_D,
+    ANNEXURE_E,
+    ANNEXURE_F,
+    ANNEXURE_H,
+    ANNEXURE_I,
+    NOC_EMPLOYER
+}

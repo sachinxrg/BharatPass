@@ -68,8 +68,8 @@ public class SecurityConfig {
                     String token = authHeader.substring(7);
                     try {
                         var claims = jwtTokenService.validateAccessToken(token);
-                        String userId = claims.get("sub", String.class);
-                        String role = claims.get("role", String.class);
+                        String userId = claims.getSubject();
+                        String role = claims.getStringClaim("role");
 
                         var authorities = List.of(new SimpleGrantedAuthority(role));
                         var authentication = new UsernamePasswordAuthenticationToken(userId, null, authorities);

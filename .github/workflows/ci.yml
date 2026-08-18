@@ -41,6 +41,11 @@ jobs:
           path: backend/target/surefire-reports/
           retention-days: 7
 
+      - name: Package Backend Application
+        run: |
+          cd backend
+          mvn package -DskipTests=true -B
+
   frontend-build:
     name: Frontend Build (Next.js 15)
     runs-on: ubuntu-latest

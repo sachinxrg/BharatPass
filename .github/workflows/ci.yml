@@ -28,6 +28,11 @@ jobs:
           cd backend
           mvn clean compile -B
 
+      - name: Run Backend Tests
+        run: |
+          cd backend
+          mvn test -B
+
   frontend-build:
     name: Frontend Build (Next.js 15)
     runs-on: ubuntu-latest

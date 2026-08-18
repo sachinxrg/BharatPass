@@ -90,3 +90,10 @@ jobs:
         env:
           NEXT_PUBLIC_API_URL: http://localhost:8080
           NEXT_PUBLIC_APP_NAME: Bharat Pass
+
+      - name: Upload Frontend Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bharatpass-frontend-build
+          path: frontend/.next/
+          retention-days: 14

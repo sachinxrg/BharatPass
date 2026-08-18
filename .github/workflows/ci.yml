@@ -53,6 +53,11 @@ jobs:
           cd frontend
           npm run lint
 
+      - name: Type-check Frontend
+        run: |
+          cd frontend
+          npx tsc --noEmit
+
       - name: Build Next.js Application
         run: |
           cd frontend
